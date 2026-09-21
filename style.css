@@ -31,7 +31,12 @@ html{
 
 body{
     background-color: var(--background-color);
-    height: 100dvh;
+    
+}
+
+header{
+    position: sticky;
+    top: 0;
 }
 
 nav{
@@ -82,6 +87,7 @@ nav li a.active-link{
 
 main{
     margin: 0 4%;
+    height: 100dvh;
 }
 
 .head{
@@ -336,9 +342,8 @@ main{
 
 
 footer{
-    position: fixed;
-    bottom: 20px;
     margin: 0 4%;
+    margin-bottom: 20px;
     width: 92%;
     height: 60px;
     background-color: var(--card-background);
