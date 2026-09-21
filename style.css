@@ -338,7 +338,7 @@ main{
 footer{
     position: fixed;
     bottom: 20px;
-    width: 93%;
+    width: 92.5%;
     height: 60px;
     background-color: var(--card-background);
 
