@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --nav-background:  #0f2041;
+    --background-color: #070d15 ;
+
+    --text-color: #ffffff;
+    --secondary-text-color: #8fa3c0;
+
+    --key-color: #1f2d44;
+    --hover-key-color: #263a56;
+    --pressed-key-color: #46cd7a;
+    --pressed-key-text-color: #ffffff;
+
+    --hover-link-color: #8bb6f7;
+    --active-link-color: #5b9cff;
+
+    --border-color: #1d2c43;
+    --card-background: #101d31;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: var(--text-color);
+}
+
+body{
+    background-color: var(--background-color);
+    height: 100dvh;
+}
+
+nav{
+    height: 60px;
+    background-color: var(--nav-background);
+}
+
+nav ul{
+    margin: 0 4%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+nav ul img{
+    width: 65px;
+}
+
+nav li a{
+    text-decoration: none;
+    color:var(--secondary-text-color);
+    padding: 7px 0;
+
+     border-bottom: 2px solid transparent;
+    transition: 300ms ease;
+}
+
+nav li a:hover{
+    color: var(--hover-link-color);
+    border-bottom: 2px solid var(--hover-link-color);
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav li a.active-link{
+    border-bottom: 2px solid var(--active-link-color);
+    color: var(--active-link-color);
+}
+
+main{
+    margin: 0 4%;
+}
+
+.head{
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.head article{
+    width: 50%;
+    text-align: center;
+}
+
+.head h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.head span{
+    background : linear-gradient(to right, #5c91fb , #8176f5);
+    color: transparent;
+    background-clip: text;
+}
+
+.head p{
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+
+.keyboard{
+    margin-top: 30px;
+    width: 100%;
+    background-color: var(--card-background);
+    height: 380px;
+
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 0 2px black;
+}
+
+.keyboard-head{
+    background-color: var(--border-color);
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    justify-content: space-between;
+}
+
+.keyboard .keyboard-head img{
+    width: 35px;
+    margin-left: 15px;
+}
+
+.keyboard-head .display-box{
+    margin: 2px;
+    width: 60%;
+    background-color: var(--card-background);
+    border-radius: 10px;
+}
+
+.keyboard-head-btns{
+    margin: 6px;
+}
+
+.keyboard-head-btns button{
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 12px;
+    color: var(--secondary-text-color);
+
+    border: none;
+    border-radius: 4px;
+    background-color: var(--card-background);
+
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.keyboard .keyboard-body{
+    display: grid;
+    grid-template-columns: 15fr 3fr 4fr;
+    /* background-color: red; */
+    grid-gap: 25px;
+
+    padding: 25px;
+    height: 310px;
+}
+
+.keyboard .keyboard-body button{
+
+    font-family: "Bricolage Grotesque", sans-serif;
+
+    padding: 3px;
+    margin: 3px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--key-color);
+    color: var(--text-color);
+
+    cursor: pointer;
+}
+
+
+
+
+.keyboard .keyboard-body .keys .fun-keys{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    div{
+        display: flex;
+    }
+    button{
+        width: 40px;
+    }
+    margin-bottom: 15px;
+}
+
+
+.keyboard .keyboard-body .keys .digit-keys{
+    display: flex;
+    justify-content: space-between;
+
+    .normal{
+        flex-grow: 1;
+    }
+    .dig-backspace{
+        flex-grow: 2;
+    }
+}
+
+.keyboard .keyboard-body .keys .key-row-one{
+    display: flex;
+    justify-content: space-between;
+    
+    .normal{
+        flex-grow: 1;
+    }
+    .tab{
+        flex-grow: 2;
+    }
+}
+
+.keyboard .keyboard-body .keys .key-row-two{
+    display: flex;
+    justify-content: space-between;
+    
+    .normal{
+        flex-grow: 1;
+    }
+    .key-enter{
+        flex-grow: 2;
+    }
+    .caps-lock{
+        flex-grow: 0.9;
+    }
+
+}
+
+.keyboard .keyboard-body .keys .key-row-three{
+    display: flex;
+    justify-content: space-between;
+    
+    .normal{
+        flex-grow: 1;
+    }
+    .left-shift, .right-shift{
+        flex-grow: 2;
+    }
+
+}
+
+
+.keyboard .keyboard-body .keys .last-row{
+    display: flex;
+    justify-content: space-between;
+    
+    .normal{
+        flex-grow: 1;
+    }
+    .space{
+        flex-grow: 8;
+    }
+    button{
+        height: 40px;
+    }
+
+}
+
+
+
+
+
+.keyboard .keyboard-body .arrows .upper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+            "upper-one upper-two upper-three"
+            "upper-four upper-five upper-six"
+            "upper-seven upper-eight upper-nine";
+
+    button{
+        height: 45px;
+        width: auto;
+    }
+}
+
+.keyboard .keyboard-body .arrows{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.keyboard .keyboard-body .arrows .lower{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+            "lower-div1 arrow-up lower-div2"
+            "arrow-left arrow-down arrow-right";
+
+    button{
+        height: 42px;
+        width: 42px;
+    }
+}
+
+.keyboard .keyboard-body .nums{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+            "numpad-div numpad-div numpad-div numpad-div"
+            "Num-Lock nupdad-forward-slash numpad-asterisk numpad-minus"
+            "numpad-seven numpad-eight numpad-nine numpad-plus"
+            "numpad-four numpad-five numpad-six numpad-plus"
+            "numpad-one numpad-two numpad-three numpad-enter"
+            "numpad-zero numpad-zero numpad-decimal numpad-enter";
+}
+
+
+
+footer{
+    margin-top: 15px;
+    width: 100%;
+    height: 60px;
+    background-color: var(--card-background);
+
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 0 2px black;
+}
