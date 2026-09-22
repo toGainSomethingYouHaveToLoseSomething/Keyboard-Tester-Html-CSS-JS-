@@ -31,7 +31,6 @@ html{
 
 body{
     background-color: var(--background-color);
-    
 }
 
 header{
@@ -87,7 +86,7 @@ nav li a.active-link{
 
 main{
     margin: 0 4%;
-    height: 100dvh;
+    min-height: 80dvh;
 }
 
 .head{
