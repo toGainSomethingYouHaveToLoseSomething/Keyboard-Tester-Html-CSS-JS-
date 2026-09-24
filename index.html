@@ -43,149 +43,154 @@
         <section class="keyboard" >
             <div class="keyboard-head">
                 <img src="./images/logo.png" alt="">
-                <div class="display-box">
-
+                <div class="display-box-container">
+                    <div class="display-box">
+                        <!-- code form js -->
+                    </div>
+                    <div aria-hidden="true" class="forspace">
+                        forspace
+                    </div>
                 </div>
                 <div class="keyboard-head-btns">
                     <button onclick="resetAllKeys()"><i class="fa-solid fa-rotate-left"></i>Reset</button>
                     <!-- <i class="fa-solid fa-volume-xmark"></i> -->
-                    <button onclick="toggleSound()" id="sound-btn"><i class="fa-solid fa-volume"></i></button>
+                    <button onclick="toggleSound(this)" id="sound-btn"><i class="fa-solid fa-volume"></i></button>
                 </div>
             </div>
 
             <div class="keyboard-body">
                 <div class="keys">
                     <div class="fun-keys">
-                        <div><button id="Escape" class="esc key-btn">Esc</button></div>
-                        <div><button id="F1" class="key-btn">F1</button><button id="F2" class="key-btn">F2</button><button id="F3" class="key-btn">F3</button><button id="F4" class="key-btn">F4</button></div>
-                        <div><button id="F5" class="key-btn">F5</button><button id="F6" class="key-btn">F6</button><button id="F7" class="key-btn">F7</button><button id="F8" class="key-btn">F8</button></div>
-                        <div><button id="F9" class="key-btn">F9</button><button id="F10" class="key-btn">F10</button><button id="F11" class="key-btn">F11</button><button id="F12" class="key-btn">F12</button></div>
+                        <div><button id="Escape" value="Escape" class="esc key-btn">Esc</button></div>
+                        <div><button id="F1" value="F1" class="key-btn">F1</button><button id="F2" value="F2" class="key-btn">F2</button><button id="F3" value="F3" class="key-btn">F3</button><button id="F4" value="F4" class="key-btn">F4</button></div>
+                        <div><button id="F5" value="F5" class="key-btn">F5</button><button id="F6" value="F6" class="key-btn">F6</button><button id="F7" value="F7" class="key-btn">F7</button><button id="F8" value="F8" class="key-btn">F8</button></div>
+                        <div><button id="F9" value="F9" class="key-btn">F9</button><button id="F10" value="F10" class="key-btn">F10</button><button id="F11" value="F11" class="key-btn">F11</button><button id="F12" value="F12" class="key-btn">F12</button></div>
                     </div>
                     <div class="digit-keys">
-                        <button id="Backquote" class="backtic normal key-btn">~<br>`</button>
-                        <button id="Digit1" class="key-btn">!<br>1</button>
-                        <button id="Digit2" class="key-btn">@<br>2</button>
-                        <button id="Digit3" class="key-btn">#<br>3</button>
-                        <button id="Digit4" class="key-btn">$<br>4</button>
-                        <button id="Digit5" class="key-btn">%<br>5</button>
-                        <button id="Digit6" class="key-btn">^<br>6</button>
-                        <button id="Digit7" class="key-btn">&<br>7</button>
-                        <button id="Digit8" class="key-btn">*<br>8</button>
-                        <button id="Digit9" class="key-btn">&#40<br>9</button>
-                        <button id="Digit0" class="key-btn">&#41<br>0</button>
-                        <button id="Minus" class="key-btn">_<br>-</button>
-                        <button id="Equal" class="key-btn">+<br>=</button>
-                        <button id="Backspace" class="key-btn"><i class="fa-solid fa-arrow-left-long"></i></button>
+                        <button id="Backquote" value="`" class="backtic normal key-btn">~<br>`</button>
+                        <button id="Digit1" value="1" class="key-btn">!<br>1</button>
+                        <button id="Digit2" value="2" class="key-btn">@<br>2</button>
+                        <button id="Digit3" value="3" class="key-btn">#<br>3</button>
+                        <button id="Digit4" value="4" class="key-btn">$<br>4</button>
+                        <button id="Digit5" value="5" class="key-btn">%<br>5</button>
+                        <button id="Digit6" value="6" class="key-btn">^<br>6</button>
+                        <button id="Digit7" value="7" class="key-btn">&<br>7</button>
+                        <button id="Digit8" value="8" class="key-btn">*<br>8</button>
+                        <button id="Digit9" value="9" class="key-btn">&#40<br>9</button>
+                        <button id="Digit0" value="0" class="key-btn">&#41<br>0</button>
+                        <button id="Minus" value="-" class="key-btn">_<br>-</button>
+                        <button id="Equal" value="=" class="key-btn">+<br>=</button>
+                        <button id="Backspace" value="Backspace" class="key-btn"><i class="fa-solid fa-arrow-left-long"></i></button>
                     </div>
                     <div class="key-row-one">
-                        <button id="Tab" class="key-btn">Tab</button>
-                        <button id="KeyQ" class="key-btn">Q</button>
-                        <button id="KeyW" class="key-btn">W</button>
-                        <button id="KeyE" class="key-btn">E</button>
-                        <button id="KeyR" class="key-btn">R</button>
-                        <button id="KeyT" class="key-btn">T</button>
-                        <button id="KeyY" class="key-btn">Y</button>
-                        <button id="KeyU" class="key-btn">U</button>
-                        <button id="KeyI" class="key-btn">I</button>
-                        <button id="KeyO" class="key-btn">O</button>
-                        <button id="KeyP" class="key-btn">P</button>
-                        <button id="BracketLeft" class="key-btn">&#123<br>&#91</button>
-                        <button id="BracketRight" class="key-btn">&#125<br>&#93</button>
-                        <button id="Backslash" class="key-btn">|<br>\</button>
+                        <button id="Tab" value="Tab" class="key-btn">Tab</button>
+                        <button id="KeyQ" value="q" class="key-btn">Q</button>
+                        <button id="KeyW" value="w"  class="key-btn">W</button>
+                        <button id="KeyE" value="e" class="key-btn">E</button>
+                        <button id="KeyR" value="r" class="key-btn">R</button>
+                        <button id="KeyT" value="t" class="key-btn">T</button>
+                        <button id="KeyY" value="y" class="key-btn">Y</button>
+                        <button id="KeyU" value="u" class="key-btn">U</button>
+                        <button id="KeyI" value="i" class="key-btn">I</button>
+                        <button id="KeyO" value="o" class="key-btn">O</button>
+                        <button id="KeyP" value="p" class="key-btn">P</button>
+                        <button id="BracketLeft" value="[" class="key-btn">&#123<br>&#91</button>
+                        <button id="BracketRight" value="]" class="key-btn">&#125<br>&#93</button>
+                        <button id="Backslash" value="\" class="key-btn">|<br>\</button>
                         
                     </div>
                     <div class="key-row-two">
-                        <button id="CapsLock" class="key-btn">Caps Lock</button>
-                        <button id="KeyA" class="key-btn">A</button>
-                        <button id="KeyS" class="key-btn">S</button>
-                        <button id="KeyD" class="key-btn">D</button>
-                        <button id="KeyF" class="key-btn">F</button>
-                        <button id="KeyG" class="key-btn">G</button>
-                        <button id="KeyH" class="key-btn">H</button>
-                        <button id="KeyJ" class="key-btn">J</button>
-                        <button id="KeyK" class="key-btn">K</button>
-                        <button id="KeyL" class="key-btn">L</button>
-                        <button id="Semicolon" class="key-btn">;<br>:</button>
-                        <button id="Quote" class="key-btn">&quot<br>&#39</button>
-                        <button id="Enter" class="key-btn">Enter</button>
+                        <button id="CapsLock" value="CapsLock" class="key-btn">Caps Lock</button>
+                        <button id="KeyA" value="a" class="key-btn">A</button>
+                        <button id="KeyS" value="s" class="key-btn">S</button>
+                        <button id="KeyD" value="d" class="key-btn">D</button>
+                        <button id="KeyF" value="f" class="key-btn">F</button>
+                        <button id="KeyG" value="g" class="key-btn">G</button>
+                        <button id="KeyH" value="h" class="key-btn">H</button>
+                        <button id="KeyJ" value="j" class="key-btn">J</button>
+                        <button id="KeyK" value="k" class="key-btn">K</button>
+                        <button id="KeyL" value="l" class="key-btn">L</button>
+                        <button id="Semicolon" value=";" class="key-btn">;<br>:</button>
+                        <button id="Quote" value="'" class="key-btn">&quot<br>&#39</button>
+                        <button id="Enter" value="Enter" class="key-btn">Enter</button>
                     </div>
                     <div class="key-row-three">
-                        <button id="ShiftLeft" class="key-btn"><i class="fa-solid fa-arrow-up"></i>Shift</button>
-                        <button id="KeyZ" class="key-btn">Z</button>
-                        <button id="KeyX" class="key-btn">X</button>
-                        <button id="KeyC" class="key-btn">C</button>
-                        <button id="KeyV" class="key-btn">V</button>
-                        <button id="KeyB" class="key-btn">B</button>
-                        <button id="KeyN" class="key-btn">N</button>
-                        <button id="KeyM" class="key-btn">M</button>
-                        <button id="Comma" class="key-btn">&lt<br>,</button>
-                        <button id="Period" class="key-btn">&gt<br>.</button>
-                        <button id="Slash" class="key-btn">?<br>/</button>
-                        <button id="ShiftRight" class="key-btn"><i class="fa-solid fa-arrow-up"></i>Shift</button>
+                        <button id="ShiftLeft" value="Shift" class="key-btn"><i class="fa-solid fa-arrow-up"></i>Shift</button>
+                        <button id="KeyZ" value="z" class="key-btn">Z</button>
+                        <button id="KeyX" value="x" class="key-btn">X</button>
+                        <button id="KeyC" value="c" class="key-btn">C</button>
+                        <button id="KeyV" value="v" class="key-btn">V</button>
+                        <button id="KeyB" value="b" class="key-btn">B</button>
+                        <button id="KeyN" value="n" class="key-btn">N</button>
+                        <button id="KeyM" value="m" class="key-btn">M</button>
+                        <button id="Comma" value="," class="key-btn">&lt<br>,</button>
+                        <button id="Period" value="." class="key-btn">&gt<br>.</button>
+                        <button id="Slash" value="/" class="key-btn">?<br>/</button>
+                        <button id="ShiftRight" value="Shift" class="key-btn"><i class="fa-solid fa-arrow-up"></i>Shift</button>
                     </div>
                     <div class="last-row">
-                        <button id="ControlLeft" class="key-btn">Ctrl</button>
-                        <button id="MetaLeft" class="key-btn"><i class="fa-brands fa-microsoft"></i></button>
-                        <button id="AltLeft" class="key-btn">Alt</button>
-                        <button id="Space" class="key-btn"></button>
-                        <button id="AltRight" class="key-btn">Alt</button>
-                        <button id="MetaRight" class="key-btn"><i class="fa-brands fa-microsoft"></i></button>
-                        <button id="ContextMenu" class="key-btn"><i class="fa-solid fa-bars-staggered"></i></button>
-                        <button id="ControlRight" class="key-btn">Ctrl</button>
+                        <button id="ControlLeft" value="Control" class="key-btn">Ctrl</button>
+                        <button id="MetaLeft" value="Meta" class="key-btn"><i class="fa-brands fa-microsoft"></i></button>
+                        <button id="AltLeft" value="Alt" class="key-btn">Alt</button>
+                        <button id="Space" value="" class="key-btn"></button>
+                        <button id="AltRight" value="Alt" class="key-btn">Alt</button>
+                        <button id="MetaRight" value="Meta" class="key-btn"><i class="fa-brands fa-microsoft"></i></button>
+                        <button id="ContextMenu" value="ContextMenu" class="key-btn"><i class="fa-solid fa-bars-staggered"></i></button>
+                        <button id="ControlRight" value="Control" class="key-btn">Ctrl</button>
                     </div>
 
                 </div>
                 <div class="arrows">
                     <div class="upper">
                         <button id="" style="grid-area: upper-one;" class="key-btn">PrtSc<br>SysRq</button>
-                        <button id="ScrollLock" style="grid-area: upper-two;" class="key-btn">Scroll<br>Lock</button>
-                        <button id="Pause" style="grid-area: upper-three;" class="key-btn">Paus <br>Break</button>
-                        <button id="Insert" style="grid-area: upper-four;" class="key-btn">Insert</button>
-                        <button id="Home" style="grid-area: upper-five;" class="key-btn">Home</button>
-                        <button id="PageUp" style="grid-area: upper-six;" class="key-btn">Page<br>Up</button>
-                        <button id="Delete" style="grid-area: upper-seven;" class="key-btn">Delete</button>
-                        <button id="End" style="grid-area: upper-eight;" class="key-btn">End</button>
-                        <button id="PageDown" style="grid-area: upper-nine;" class="key-btn">Page<br>Down</button>
+                        <button id="ScrollLock" value="ScrollLock" style="grid-area: upper-two;" class="key-btn">Scroll<br>Lock</button>
+                        <button id="Pause" value="Pause" style="grid-area: upper-three;" class="key-btn">Paus <br>Break</button>
+                        <button id="Insert" value="Insert" style="grid-area: upper-four;" class="key-btn">Insert</button>
+                        <button id="Home" value="Home" style="grid-area: upper-five;" class="key-btn">Home</button>
+                        <button id="PageUp" value="PageUp" style="grid-area: upper-six;" class="key-btn">Page<br>Up</button>
+                        <button id="Delete" value="Delete" style="grid-area: upper-seven;" class="key-btn">Delete</button>
+                        <button id="End" value="End" style="grid-area: upper-eight;" class="key-btn">End</button>
+                        <button id="PageDown" value="PageDown" style="grid-area: upper-nine;" class="key-btn">Page<br>Down</button>
                     </div>
                     <div class="lower">
-                        <div style="grid-area: lower-div1;"></div><button id="ArrowUp" class="key-btn" style="grid-area: arrow-up;"><i class="fa-solid fa-arrow-up"></i></button><div style="grid-area: lower-div2;"></div>
-                        <button id="ArrowLeft" class="key-btn" style="grid-area: arrow-left;"><i class="fa-solid fa-arrow-left"></i></i></button>
-                        <button id="ArrowDown" class="key-btn" style="grid-area: arrow-down;"><i class="fa-solid fa-arrow-down"></i></button>
-                        <button id="ArrowRight" class="key-btn" style="grid-area: arrow-right;"><i class="fa-solid fa-arrow-right"></i></button>
+                        <div style="grid-area: lower-div1;"></div><button id="ArrowUp" value="ArrowUp" class="key-btn" style="grid-area: arrow-up;"><i class="fa-solid fa-arrow-up"></i></button><div style="grid-area: lower-div2;"></div>
+                        <button id="ArrowLeft" value="ArrowLeft" class="key-btn" style="grid-area: arrow-left;"><i class="fa-solid fa-arrow-left"></i></i></button>
+                        <button id="ArrowDown" value="ArrowDown" class="key-btn" style="grid-area: arrow-down;"><i class="fa-solid fa-arrow-down"></i></button>
+                        <button id="ArrowRight" value="ArrowRight" class="key-btn" style="grid-area: arrow-right;"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
                 <div class="nums">
                     <div style="grid-area: numpad-div;">
                         <div class="mouse-layout">
-                            <button id="mouse-left"  class="key-btn">
-                                <img src="images/mouse-left-click.png" alt="">
+                            <button id="mouse-left" value="MouseLeft" class="key-btn">
+                                <img  src="images/mouse-left-click.png" alt="">
                             </button>
-                            <button id="mouse-wheel" class="key-btn">
-                                <img src="images/mouse-wheel-only.png" alt="">
+                            <button id="mouse-wheel" value="MouseWheel" class="key-btn">
+                                <img  src="images/mouse-wheel-only.png" alt="">
                             </button>
-                            <button id="mouse-right" class="key-btn">
-                                <img src="images/mouse-right-click.png" alt="">
+                            <button id="mouse-right" value="MouseRight" class="key-btn">
+                                <img  src="images/mouse-right-click.png" alt="">
                             </button>
                         </div>
                         <div style="grid-area: numpad-div2;"></div>
                     </div>
-                    <button id="NumLock" class="key-btn" style="grid-area: Num-Lock;">Num<br>Lock</button>
-                    <button id="NumpadDivide" class="key-btn" style="grid-area: nupdad-forward-slash;">/</button>
-                    <button id="NumpadMultiply" class="key-btn" style="grid-area: numpad-asterisk;">*</button>
-                    <button id="NumpadSubtract" class="key-btn" style="grid-area: numpad-minus;">-</button>
-                    <button id="Numpad7" class="key-btn" style="grid-area: numpad-seven;">7<br></button>
-                    <button id="Numpad8" class="key-btn" style="grid-area: numpad-eight;">8</button>
-                    <button id="Numpad9" class="key-btn" style="grid-area: numpad-nine;">9</button>
-                    <button id="NumpadAdd" class="key-btn" style="grid-area: numpad-plus;">+</button>
-                    <button id="Numpad4" class="key-btn" style="grid-area: numpad-four;">4</button>
-                    <button id="Numpad5" class="key-btn" style="grid-area: numpad-five;">5</button>
-                    <button id="Numpad6" class="key-btn" style="grid-area: numpad-six;">6</button>
-                    <button id="Numpad1" class="key-btn" style="grid-area: numpad-one;">1</button>
-                    <button id="Numpad2" class="key-btn" style="grid-area: numpad-two;">2</button>
-                    <button id="Numpad3" class="key-btn" style="grid-area: numpad-three;">3</button>
-                    <button id="NumpadEnter" class="key-btn" style="grid-area: numpad-enter;">Enter</button>
-                    <button id="Numpad0" class="key-btn" style="grid-area: numpad-zero;">0</button>
-                    <button id="NumpadDecimal" class="key-btn" style="grid-area: numpad-decimal;">.</button>
+                    <button id="NumLock" value="NumLock" class="key-btn" style="grid-area: Num-Lock;">Num<br>Lock</button>
+                    <button id="NumpadDivide" value="/" class="key-btn" style="grid-area: nupdad-forward-slash;">/</button>
+                    <button id="NumpadMultiply" value="*" class="key-btn" style="grid-area: numpad-asterisk;">*</button>
+                    <button id="NumpadSubtract" value="-" class="key-btn" style="grid-area: numpad-minus;">-</button>
+                    <button id="Numpad7" value="7" class="key-btn" style="grid-area: numpad-seven;">7<br></button>
+                    <button id="Numpad8" value="8" class="key-btn" style="grid-area: numpad-eight;">8</button>
+                    <button id="Numpad9" value="9" class="key-btn" style="grid-area: numpad-nine;">9</button>
+                    <button id="NumpadAdd" value="+" class="key-btn" style="grid-area: numpad-plus;">+</button>
+                    <button id="Numpad4" value="4" class="key-btn" style="grid-area: numpad-four;">4</button>
+                    <button id="Numpad5" value="5" class="key-btn" style="grid-area: numpad-five;">5</button>
+                    <button id="Numpad6" value="6" class="key-btn" style="grid-area: numpad-six;">6</button>
+                    <button id="Numpad1" value="1" class="key-btn" style="grid-area: numpad-one;">1</button>
+                    <button id="Numpad2" value="2" class="key-btn" style="grid-area: numpad-two;">2</button>
+                    <button id="Numpad3" value="3" class="key-btn" style="grid-area: numpad-three;">3</button>
+                    <button id="NumpadEnter" value="Enter" class="key-btn" style="grid-area: numpad-enter;">Enter</button>
+                    <button id="Numpad0" value="0" class="key-btn" style="grid-area: numpad-zero;">0</button>
+                    <button id="NumpadDecimal" value="." class="key-btn" style="grid-area: numpad-decimal;">.</button>
                 </div>
             </div>
         </section>

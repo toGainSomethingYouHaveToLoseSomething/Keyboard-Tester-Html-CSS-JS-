@@ -2,9 +2,9 @@ const buttons = document.querySelectorAll('.key-btn')
 const mouse_left = document.querySelector('#mouse-left')
 const mouse_right = document.querySelector('#mouse-right')
 const mouse_wheel = document.querySelector('#mouse-wheel')
-const sound = new Audio('./sounds/click-keyboard_short2_high.wav')
+const displayBox = document.querySelector('.display-box')
 
-const pressedButtons = ['']
+const sound = new Audio('./sounds/click-keyboard_short2_high.wav')
 
 let isSound = true;
 
@@ -13,6 +13,8 @@ buttons.forEach(btn => {
         const current_btn = event.target
         current_btn.classList.add('button-pressed')
         if(isSound) sound.play()
+
+        renderPage(event.target.value)
     })
 });
 
@@ -22,18 +24,23 @@ document.addEventListener('keydown',(event)=>{
     const current_btn = document.querySelector(`#${_id}`)
     current_btn.classList.add('button-pressed')
     if(isSound) sound.play()
+
+    renderPage(event.key)
 })
 
 document.addEventListener('click',(event)=>{
     mouse_left.classList.add('button-pressed')
+    renderPage('MouseLeft')
 } )
 
 document.addEventListener('contextmenu',(event)=>{
     mouse_right.classList.add('button-pressed')
+    renderPage('MouoseRight')
 })
 
 document.addEventListener('wheel',(event)=>{
     mouse_wheel.classList.add('button-pressed')
+    renderPage('MouseWheel')
 } )
 
 function resetAllKeys(){
@@ -55,4 +62,12 @@ function toggleSound(sound_btn){
         sound_btn.innerHTML = '<i class="fa-solid fa-volume"></i>'
         isSound = true
     }
+}
+
+function renderPage(val){
+    displayBox.innerHTML = displayBox.innerHTML + 
+        `<div class="inputedValue">
+            ${val}
+        </div>`
+    displayBox.scrollLeft = displayBox.scrollWidth
 }
