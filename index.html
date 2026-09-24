@@ -44,11 +44,13 @@
         <section class="keyboard" >
             <div class="keyboard-head">
                 <img src="./images/logo.png" alt="">
-                <div class="display-box"></div>
+                <div class="display-box">
+                    
+                </div>
                 <div class="keyboard-head-btns">
-                    <button><i class="fa-solid fa-rotate-left"></i>Reset</button>
+                    <button onclick="resetAllKeys()"><i class="fa-solid fa-rotate-left"></i>Reset</button>
                     <!-- <i class="fa-solid fa-volume-xmark"></i> -->
-                    <button><i class="fa-solid fa-volume"></i></button>
+                    <button onclick="toggleSound()" id="sound-btn"><i class="fa-solid fa-volume"></i></button>
                 </div>
             </div>
 
@@ -96,7 +98,7 @@
                     <div class="key-row-two">
                         <button id="CapsLock" class="key-btn">Caps Lock</button>
                         <button id="KeyA" class="key-btn">A</button>
-                        <button id="Keys" class="key-btn">S</button>
+                        <button id="KeyS" class="key-btn">S</button>
                         <button id="KeyD" class="key-btn">D</button>
                         <button id="KeyF" class="key-btn">F</button>
                         <button id="KeyG" class="key-btn">G</button>
@@ -156,13 +158,13 @@
                 <div class="nums">
                     <div style="grid-area: numpad-div;">
                         <div class="mouse-layout">
-                            <button  class="mouse-left key-btn">
+                            <button id="mouse-left"  class="key-btn">
                                 <img src="images/mouse-left-click.png" alt="">
                             </button>
-                            <button class="mouse-wheel key-btn">
+                            <button id="mouse-wheel" class="key-btn">
                                 <img src="images/mouse-wheel-only.png" alt="">
                             </button>
-                            <button class="mouse-righ key-btn">
+                            <button id="mouse-right" class="key-btn">
                                 <img src="images/mouse-right-click.png" alt="">
                             </button>
                         </div>
